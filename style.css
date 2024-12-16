@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+h1, h2 {
+    color: #333333;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+  border: 2px solid black;
+  border-radius: 0px;
+}
+sup {
+  font-size: small;
+}
+#sidebar {
+width: 254px;
+border-right: 2px solid black;
+height: 100%;
+position: absolute;
+  text-align: center;
+left: 0;
+top: 0;
+}
+#sidebar > h1 {
+white-space: nowrap;
+font-size: ;
+}
+form > input {
+max-width: 150px;
+}
+
+.versionstring {
+bottom: 0;
+  position: absolute;
+  text-align: center;
+  left: 0;
+  right: 0;
+
+}
+#currentuser {
+font-weight: bold;
+text-decoration: underline;
+}
+.messagesection {
+width: 72%;
+  left: 15%;
+  position: absolute;
+  top: 200px;
+}
+#sidebar > hr {
+  width: 107%;
+  left: -20px;
+  position: relative;
+}
+#postSection {
+  width: 72%;
+  left: 15%;
+  position: absolute;
+  top: 9px;
+}
+.post {
+  border: 2px solid black;
+  border-radius: 0px;
+  background-color: gray;
+  color: white;
+}
+.post > p {
+  margin-left: 5px;
+}
+
+.delBtn {
+      background-color: red;
+}
+
+.delBtn:hover {
+      background-color: darkred;
+}
+
+.button-container {
+  float: right;
+  position: relative;
+  bottom: 45px;
+  right: 5px;
+}
+button {
+    color: white;
+  border: 2px solid black;
+  border-radius: 0px; 
+  padding: 10px;
+    cursor: pointer;
+    background-color: gray;
+}
+
+button:hover {
+    background-color: darkgray;
+}
+.postbutton:disabled {
+  background-color: #383838;
+  cursor: not-allowed;
+}
