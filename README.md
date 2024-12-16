@@ -1,4 +1,4 @@
 # Valeria
 Valeria is a pre-built barebones social network client written in HTML, CSS, and JS.<br>
 The client connects to an API linked to a MySQL/SQLite Database.<br>
-A future software, [Celestia](https://github.com/kitstudios/Celestia), will be the recommended server software to use with Valeria.
+A server software, [Celestia](https://github.com/kitstudios/Celestia), is the recommended server software to use with Valeria.
