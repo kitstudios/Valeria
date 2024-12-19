@@ -1,55 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valeria Project</title>
-    <link rel="stylesheet" href="style.css">
+	<meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+
+    
+	<title>Valeria Project</title>
 </head>
-<body>
-          <div id="sidebar">
-		  <h1>Valeria Project</h1>
-            <p class="currentusertxt">Currently signed in as <a id="currentuser">Guest</a></p>
-            <hr>
-          <div class="registersection">
-            <h2>Register</h2>
-            <form id="registerForm">
-                <input type="text" id="regUsername" placeholder="Username" required>
-                <input type="password" id="regPassword" placeholder="Password" required>
-                <input type="email" id="regEmail" placeholder="Email" required>
-                <br>
-                <button type="submit">Register</button>
-            </form>
-          </div>
+<body onload="loadMessages();">
+
+<div class="sidenav">
+    <h3 class="websitetitle">Valeria Project</h3>  
+    <hr>
+  <p class="currentusertxt">Signed in as <a id="currentuser">Guest</a></p>  
 <hr>
-          <div class="loginsection">
-            <h2>Login</h2>
-            <form id="loginForm">
-                <input type="text" id="loginUsername" placeholder="Username" required>
-                <input type="password" id="loginPassword" placeholder="Password" required>
-                <br>
-                <button type="submit">Login</button>
-            </form>
+<br>
+<br>
+  <div class="sidenavlist">
+   <a class="white" onclick="openTab('Home')">Home</a>
+   <a class="white" onclick="openTab('Login')">Login</a>
+   <a class="white" onclick="openTab('Register')">Register</a>
+  </div>
+  <br>
+  <div class="white" id="versionstring"></div>
+</div>
+
+<!-- Page content -->
+<div class="main">
+  <div id="Home" class="tab" style="">
+    <div id="content">
+      <div id="postSection">
+          <h2>Send a post</h2>
+          <form id="postForm">
+              <textarea id="postinput" placeholder="You must be signed in to write a post" required disabled></textarea>
+              <br>
+              <br>
+              <button class="postbutton" type="submit" disabled>Post it!</button>
+          </form>
+      </div>
+
+          <div class="messagesection">
+          <h2>Posts</h2>
+          <div id="postlist"><p>Loading posts...</p></div>
           </div>
-<hr>
-        <p class="versionstring"></p>
-        </div>
-        <div id="postSection">
-            <h2>Send a post</h2>
-            <form id="postForm">
-                <textarea id="postinput" placeholder="You must be signed in to write a post" required disabled></textarea>
-                <button class="postbutton" type="submit" disabled>Post it!</button>
-            </form>
-        </div>
+   </div>
+  </div>
+	
 
-            <div class="messagesection">
-            <h2>Posts</h2>
-            <div id="postlist"></div>
-            </div>
+    <div id="Login" class="tab" style="display:none;">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <input type="text" id="loginUsername" placeholder="Username" required>
+            <br>
+            <input type="password" id="loginPassword" placeholder="Password" required>
+            <br>
+            <button type="submit">Login</button>
+        </form>
+    </div>
 
-
-
-
-    <script src="script.js"></script>
+    <div id="Register" class="tab" style="display:none;">
+        <h2>Register</h2>
+        <form id="registerForm">
+            <input type="text" id="regUsername" placeholder="Username" required>
+            <br>
+            <input type="password" id="regPassword" placeholder="Password" required>
+            <br>
+            <input type="email" id="regEmail" placeholder="Email" required>
+            <br>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</div>
+<script async src="assets/js/script.js"></script>
 </body>
 </html>
