@@ -10,7 +10,12 @@
     
 	<title>Valeria Project</title>
 </head>
-<body onload="loadMessages();">
+<body onload="loadPosts();">
+<div id="alert" style="display: none;">
+    <img class="alertImg" src="assets/img/alert.png" height="32" width="32">			
+    <a class="alertxt"></a>
+    <button class="confirmAlertButton">OK</button>
+</div>
 
 <div class="sidenav">
     <h3 class="websitetitle">Valeria Project</h3>  
@@ -21,6 +26,7 @@
 <br>
   <div class="sidenavlist">
    <a class="white" onclick="openTab('Home')">Home</a>
+   <a class="white" id="profileSideBtn" onclick="openTab('Profile')">Profile</a>
    <a class="white" onclick="openTab('Login')">Login</a>
    <a class="white" onclick="openTab('Register')">Register</a>
   </div>
@@ -48,6 +54,22 @@
           </div>
    </div>
   </div>
+
+  <div id="Profile" class="tab" style="display:none;">
+    <h2>Profile Settings</h2>
+    <form id="updateProfileForm"> 
+        <label for="bio" class="bioLabelSettings">Bio:</label> 
+        <textarea style="height: 15px;" id="bio" name="bio" required></textarea><br>
+        <label for="profilePic">Profile Picture:</label> 
+        <input type="file" id="profilePic" name="profilePic" accept="image/*"><br>         
+        <button type="submit">Update Profile</button>
+        <br>
+        <hr>
+        <h1>Log out</h1>
+        <button onclick="signOut();">Sign out of account</button>
+    </form>
+</div>
+
 	
 
     <div id="Login" class="tab" style="display:none;">
@@ -63,6 +85,7 @@
 
     <div id="Register" class="tab" style="display:none;">
         <h2>Register</h2>
+        <p>Network is currently in development. The database may need to be reset again in the future. <br><strong>Make sure you have typed the right information, as it cannot be changed later on.</strong></p>
         <form id="registerForm">
             <input type="text" id="regUsername" placeholder="Username" required>
             <br>
@@ -73,6 +96,8 @@
             <button type="submit">Register</button>
         </form>
     </div>
+
+
 </div>
 <script async src="assets/js/script.js"></script>
 </body>

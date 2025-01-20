@@ -3,6 +3,82 @@
   font-family: SegoeUI;
   src: url(../fonts/segoeuisl.ttf);
 }
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-moz-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-o-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-ms-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes fadeIn {
+0% { opacity: 0; }
+100% { opacity: 1; }
+}
+
+@-moz-keyframes fadeIn {
+0% { opacity: 0; }
+100% { opacity: 1; }
+}
+
+@-webkit-keyframes fadeIn {
+0% { opacity: 0; }
+100% { opacity: 1; }
+}
+
+@-o-keyframes fadeIn {
+0% { opacity: 0; }
+100% { opacity: 1; }
+}
+
+@-ms-keyframes fadeIn {
+0% { opacity: 0; }
+100% { opacity: 1; }
+}
+
+
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@-moz-keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@-webkit-keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@-o-keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@-ms-keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
 body {
   background: url("https://bing.biturl.top/?resolution=1920&format=image&index=0&mkt=en-CA") !important;
 }
@@ -72,7 +148,34 @@ body {
   text-align: center;
   font-size: 11px;
 }
-
+#alert {
+  background-color: #81818180;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  z-index: 999999;
+  width: fit-content;
+  right: 15px;
+  margin: 0 auto;
+  top: 14px;
+  position: absolute;
+  border-radius: 8px;
+}
+.alertImg {
+  vertical-align: middle;
+  top: 4px;
+  position: relative;
+  left: 4px;
+}
+.alertxt {
+  position: relative;
+  left: 4px;
+  top: 5px;
+}
+.confirmAlertButton {
+  float: right;
+  position: relative;
+  margin: 0 0 0 12px;
+}
 
 /* The sidebar menu */
 .sidenav {
@@ -168,15 +271,15 @@ color: black !important;
   }
   
   .post {
-  border: 2px solid rgba(0,0,0,0.2);
-  border-radius: 8px;
-  background-color: gray;
-  color: white;
-  margin: 5px;
-  width: calc(100% - 11%);
+    border: 2px solid rgba(0,0,0,0.2);
+    border-radius: 8px;
+    background-color: gray;
+    color: white;
+    margin: 0 0 5px 0px;
+    width: calc(100% - 11%);
   }
   .post > p {
-  margin-left: 5px;
+  margin: 5px;
   }
   
   .delBtn {
@@ -188,15 +291,16 @@ color: black !important;
   }
   
   .button-container {
-  float: right;
-  position: relative;
-  bottom: 45px;
-  right: 5px;
+    float: right;
+    position: relative;
+    bottom: 45px;
+    left: 172px;
   }
   .currentusertxt {
     text-align: center;
     position: relative;
-    bottom: 3px;
+    bottom: 2px;
+    font-size: 14px;
   }
   form > input {
     max-width: 150px;
@@ -228,3 +332,50 @@ color: black !important;
   height: 488px;
   overflow-y: scroll;
       }
+      .profileInfo {
+        left: 5px;
+        position: relative;
+        top: 3px;
+      }
+      .username {
+        position: relative;
+  bottom: 20px;
+      }
+      .bio {
+        position: relative;
+        font-size: 12px;
+        left: calc(0% + 41px);
+        bottom: 24px;
+      }
+      .profilePicture {
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        border-radius: 8px;
+      }
+    
+      
+      #profileSideBtn, #accountSideBtn {
+        display: none;
+      }
+      .bioLabelSettings {
+        bottom: 15px;
+  position: relative;
+      }
+.postContent {
+  bottom: 12px;
+  position: relative;
+  left: 8px;
+}
+.timestamp {
+  bottom: 84px;
+  position: relative;
+  float: right;
+  right: 5px;
+}
+.edit-form {
+  display: block;
+  height: 94px;
+}
+.updPostBtn, .cncledtBtn, .editPostInpt {
+  bottom: 40px;
+  position: relative;
+}

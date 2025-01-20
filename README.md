@@ -1,5 +1,5 @@
 # Valeria
-Current version: 0.6.5a
+Current version: 0.8.0b
 <br>
 <br>
 Valeria is a pre-built barebones social network client written in HTML, CSS, and JS.<br>
